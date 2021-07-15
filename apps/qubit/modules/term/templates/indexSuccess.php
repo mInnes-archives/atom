@@ -78,7 +78,6 @@
 
       <?php echo get_partial('term/directTerms', [
           'resource' => $resource,
-          'action' => $sf_request->getParameter('action'),
           'aggs' => $aggs, ]); ?>
 
       <?php echo get_partial('search/searchResults', ['pager' => $pager, 'culture' => $culture]); ?>

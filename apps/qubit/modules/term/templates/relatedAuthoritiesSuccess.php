@@ -79,7 +79,6 @@
 
     <?php echo get_partial('term/directTerms', [
         'resource' => $resource,
-        'action' => $sf_request->getParameter('action'),
         'aggs' => $aggs, ]); ?>
 
     <?php if ($pager->getNbResults()) { ?>
