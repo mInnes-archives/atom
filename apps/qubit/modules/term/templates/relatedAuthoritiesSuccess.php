@@ -21,8 +21,10 @@
   <?php echo get_partial('term/errors', ['errorSchema' => $errorSchema]); ?>
 
   <?php if (QubitTerm::ROOT_ID != $resource->parentId) { ?>
-    <?php echo include_partial('default/breadcrumb',
-                 ['resource' => $resource, 'objects' => $resource->getAncestors()->andSelf()->orderBy('lft')]); ?>
+    <?php echo include_partial(
+          'default/breadcrumb',
+          ['resource' => $resource, 'objects' => $resource->getAncestors()->andSelf()->orderBy('lft')]
+      ); ?>
   <?php } ?>
 
 <?php end_slot(); ?>
@@ -49,8 +51,10 @@
 
   <?php echo get_partial('term/actions', ['resource' => $resource]); ?>
 
-  <h1><?php echo __('%1% %2% results for %3%',
-                   ['%1%' => $pager->getNbResults(), '%2%' => sfConfig::get('app_ui_label_actor'), '%3%' => render_title($resource)]); ?></h1>
+  <h1><?php echo __(
+          '%1% %2% results for %3%',
+          ['%1%' => $pager->getNbResults(), '%2%' => sfConfig::get('app_ui_label_actor'), '%3%' => render_title($resource)]
+      ); ?></h1>
 
   <section class="header-options">
 
@@ -65,12 +69,14 @@
     <?php } ?>
 
     <div class="pickers">
-      <?php echo get_partial('default/sortPickers',
-        [
+      <?php echo get_partial(
+          'default/sortPickers',
+          [
             'options' => [
                 'lastUpdated' => __('Date modified'),
                 'alphabetic' => __('Name'),
-                'identifier' => __('Identifier'), ], ]); ?>
+                'identifier' => __('Identifier'), ], ]
+      ); ?>
     </div>
 
   </section>
