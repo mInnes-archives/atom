@@ -410,6 +410,14 @@ class arElasticSearchPluginQuery
 
                 break;
 
+            case 'allExceptDigitalObjectTranscript':
+                $fields = arElasticSearchPluginUtil::getAllFields(
+                    'informationObject',
+                    ['transcript']
+                );
+
+                break;
+
             case 'parallelNames':
             case 'otherNames':
             case 'occupations':

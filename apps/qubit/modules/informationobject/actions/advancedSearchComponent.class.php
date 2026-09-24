@@ -96,6 +96,7 @@ class InformationObjectAdvancedSearchComponent extends sfComponent
             'referenceCode' => __('Reference code'),
             'digitalObjectTranscript' => __('Digital object text'),
             'creator' => __('Creator'),
+            'allExceptDigitalObjectTranscript' => __('Any field except digital object text'),
         ];
 
         if ($this->findingAidsEnabled) {
